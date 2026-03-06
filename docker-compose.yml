@@ -1,8 +1,8 @@
 services:
 
-  # ─────────────────────────────────────────
+
   # ZOOKEEPER
-  # ─────────────────────────────────────────
+ 
   zookeeper:
     image: wurstmeister/zookeeper:latest
     container_name: zookeeper
@@ -11,9 +11,9 @@ services:
     networks:
       - maritime-net
 
-  # ─────────────────────────────────────────
+
   # KAFKA
-  # ─────────────────────────────────────────
+  
   kafka:
     image: wurstmeister/kafka:latest
     container_name: kafka
@@ -30,9 +30,9 @@ services:
     networks:
       - maritime-net
 
-  # ─────────────────────────────────────────
+ 
   # ELASTICSEARCH 7.17 — stable, léger, Docker Hub
-  # ─────────────────────────────────────────
+  
   elasticsearch:
     image: elasticsearch:7.17.14
     container_name: elasticsearch
@@ -52,9 +52,9 @@ services:
       timeout: 10s
       retries: 10
 
-  # ─────────────────────────────────────────
+
   # KIBANA 7.17 — même version qu'ES obligatoire
-  # ─────────────────────────────────────────
+
   kibana:
     image: kibana:7.17.14
     container_name: kibana
@@ -68,9 +68,9 @@ services:
     networks:
       - maritime-net
 
-# ─────────────────────────────────────────
+
 # VOLUMES ET RÉSEAU
-# ─────────────────────────────────────────
+
 volumes:
   es_data:
     driver: local
